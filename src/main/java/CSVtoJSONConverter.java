@@ -40,7 +40,7 @@ public class CSVtoJSONConverter {
                 String jsonString = objectMapper.writeValueAsString(rowData);// Converts the rowData map to a JSON string using the objectMapper's writeValueAsString method. This method serializes the rowData map into its JSON representation.
                 fileWriter.write(jsonString);// Writes the JSON string to the output file using the fileWriter's write method. This writes the JSON representation of a single row to the file.
 
-                fileWriter.write("\n");// Writes a newline character to the output file using the fileWriter's write method. This ensures that each JSON object is written on a new line in the output file.
+                fileWriter.write(",\n");// Writes a newline character to the output file using the fileWriter's write method. This ensures that each JSON object is written on a new line in the output file.
             }
 
             fileWriter.close(); //Closes the fileWriter
